@@ -10,8 +10,9 @@ namespace ToDoList.Models
     public class Event
     {
         [Required]
+        [Key]
         [HiddenInput(DisplayValue=false)]
-        public int EventID{ get; set; }
+        public int ID{ get; set; }
         [Required]
         public string EventName { get; set; }
         public string Description { get; set; }
@@ -19,5 +20,6 @@ namespace ToDoList.Models
         public DateTime Created { get; set; }
         [Required]
         public DateTime Deadline { get; set; }
+        public int tmp { get; set; }
     }
 }
